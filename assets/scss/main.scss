@@ -88,6 +88,10 @@ nav {
     width: 100%;
     z-index: 999;
 
+    @include small {
+        display: none;
+    }
+
     h3 {
         margin-left: 1rem;
 
