@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+    <!-- nav -->
     <nav>
         <h3 class="logo"><a href="index.html">Raimondo Rinaldi</a></h3>
         <ul>
@@ -22,13 +22,19 @@
             <li><a href="AI ART.html">AI ART</a></li>
         </ul>
     </nav>
+    <!-- end nav -->
 
+    <!-- torna in cima -->
+    <a id="back2Top" title="Back to top" href="#"><i class="icon fas fa-arrow-up"></i></a>
+    <!-- end torna in cima -->
+
+    <!-- curriculum -->
     <section id="curriculum">
-        <div class="section-title">
-            <h1>Curriculum</h1>
-        </div>
 
         <div class="aboutme">
+            <div class="section-title">
+                <h1>Curriculum</h1>
+            </div>
             <p>
                 Shortly after I started college, I had to put my education on hold and return home to work and help my
                 family. My first job was as an electrician’s assistant for an independent company that worked with
@@ -70,8 +76,107 @@
                 BootStrap 4, VueJS, and React frameworks.
             </p>
         </div>
+
+
+        <div class="timeline">
+            <div class="section-title">
+                <h1>Esperienze</h1>
+            </div>
+
+
+
+
+            <small>&#9900 November 2007 - November 2008</small> <br><br>
+            <h3>ELECTRICIAN'S ASSISTANT</h3>
+            <p>
+                Responsibilities included: Assisted with electrical tasks, soldered wires, and assisted in assembling
+                electrical implants.<br> <br>
+            </p>
+            <small>Sarno, Italy</small>
+            <br><br>
+            <hr>
+            <br><br>
+
+            <small>&#9900 July 2009 - October 2015</small> <br><br>
+            <h3>WAITER/BARTENDER</h3>
+            <p>
+                Responsibilities included: checking inventory of food and beverages, taking orders and bringing food to
+                customers, often spoke in English with tourists, handled customer payments.<br> <br>
+            </p>
+            <small>Castellabate, Italy</small>
+            <br><br>
+            <hr>
+            <br><br>
+
+            <small>&#9900 May 2010 - October 2010</small> <br><br>
+            <h3>LEGAMBIENTE</h3>
+            <p>
+                Quality Control Specialist for Food. Responsibilities included: preparing food samples for testing,
+                tested for harmful bacteria and other organisms, did chemical analysis for heavy metals, acids,
+                pesticides, levels of pollution using microscope and spectrophotometry.<br> <br>
+            </p>
+            <small>Sarno, Italy</small>
+            <br><br>
+            <hr>
+            <br><br>
+
+            <small>&#9900 November 2014 - Present</small> <br><br>
+            <h3>BILINGUAL FREELANCE IT & WEB-DESIGNER</h3>
+            <p>
+                Employed as a freelance IT Technician. Ran the SawSystems hardware lab at M3XP until October 2016.
+                Responsibilities include: installing, troubleshooting, and repairing hardware and software for a variety
+                of clients’ businesses. Setting up and organizing LAN connections, servers, digital
+                recorders/surveillance systems, routers, modems, desktops, laptops, printers, and access points.
+                Installing and configuring Windows, Linux, Mac, Android operating systems. Traveling to client’s place
+                of business to make repairs, or assisting clients remotely. Creating custom websites using HTML, CSS,
+                JavaScript, BootStrap 4, React, VueJS, and SASS. Scheduling appointments for clients.<br> <br>
+            </p>
+            <small>Sarno, Italy</small>
+            <br><br>
+            <hr>
+            <br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </section>
 
+    <!-- end curriculum -->
 
 
 
@@ -106,10 +211,29 @@
 
 
 
-
+    <!-- scripts -->
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/jquery.min.js"></script>
+    <script>
+        $(window).scroll(function () {
+            var height = $(window).scrollTop();
+            if (height > 100) {
+                $('#back2Top').fadeIn();
+            } else {
+                $('#back2Top').fadeOut();
+            }
+        });
+        $(document).ready(function () {
+            $("#back2Top").click(function (event) {
+                event.preventDefault();
+                $("html, body").animate({ scrollTop: 0 }, "fast");
+                return false;
+            });
+
+        });
+    </script>
+    <!-- end scripts -->
 </body>
 
 </html>
