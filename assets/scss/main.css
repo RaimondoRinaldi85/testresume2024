@@ -88,7 +88,7 @@ nav ul li a:hover {
 /* End Navbar*/
 /* Landing Page*/
 #landing {
-  background-image: url("./assets/img/banner.jpg");
+  background-image: url("../img/banner.jpg");
   background-position: left;
   background-size: cover;
   height: 100vh;
