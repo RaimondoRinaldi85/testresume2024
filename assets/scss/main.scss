@@ -9,14 +9,9 @@
 }
 
 :root {
-    --head1: #5385c1;
-    --high: #0c315e;
-    --bar: #e87122ad;
-    --bar2: #5385c19b;
-    --grigio: #9a9a9a;
-    --bianco: #f1f1f1;
-    --blue: #1461fb78;
-    --orange: #e19d5d93;
+    --blue: #003F7D;
+    --orange: #FD7702;
+    --silver: #C0C0C0;
     --shadow: 2px 2px 12px rgba(0, 0, 0, 0.692);
 }
 
@@ -51,7 +46,7 @@ html {
         margin: 1rem auto;
         width: 30%;
         text-align: center;
-        border: 1px solid #5385c1;
+        border: 1px solid white;
     }
 
     li {
@@ -71,43 +66,43 @@ html {
         margin: .5rem;
         font-size: 12px;
         font-weight: 600;
-        color: black;
+        color: #003F7D;
         transition: .5s;
 
         &:hover {
-            background-color: #333;
+            background-color: var(--blue);
             color: white;
         }
     }
 
     .inactive {
         color: #47474783;
+        font-size: 12px;
+        margin: auto 1rem;
+        padding-top: .2rem;
     }
-
 }
 
 /* End Generali/
-
 /* Navbar*/
+
 nav {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--silver);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: .5rem;
-    position: fixed;
-    top: 0;
     width: 100%;
     z-index: 999;
 
     h3 {
-        margin: 0.5rem;
+        margin-left: 1rem;
 
         a {
-            color: rgb(0, 0, 0);
-            font-size: 20px;
+            color: var(--blue);
+            font-size: 18px;
 
             &:hover {
-                color: #5385c1;
+                color: #333;
             }
         }
 
@@ -120,20 +115,20 @@ nav {
         display: flex;
 
         li {
-            margin: auto 1em;
+            margin: auto 1rem;
             list-style: none;
 
             a {
-                color: rgb(0, 0, 0);
-                font-size: 15px;
+                color: var(--blue);
+                font-size: 12px;
 
                 &:hover {
-                    color: #5385c1;
+                    color: #333;
                 }
 
                 @include small {
                     &:hover {
-                        color: #0c315e;
+                        color: #333;
                     }
                 }
             }
@@ -153,11 +148,12 @@ nav {
 }
 
 /* End Navbar*/
-
 /* Landing Page*/
 
 #landing {
-    background-color: #333;
+    background-image: url("/assets/img/banner.jpg");
+    background-position: left;
+    background-size: cover;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -193,9 +189,151 @@ nav {
 
         }
     }
+
+
+    .buttons {
+        display: flex;
+        margin: 1rem;
+    }
+
+    .social-landing {
+        display: flex;
+        justify-content: center;
+
+        li {
+            transform: translateX(50%);
+            font-size: 40px;
+            margin: 2.5rem 1.5rem 0 0;
+
+            a {
+                font-size: 25px;
+                color: white;
+
+                &:hover {
+                    color: var(--blue);
+                }
+            }
+        }
+    }
 }
 
-.buttons {
-    display: flex;
-    margin: 1rem;
+/* End Landing Page*/
+/* Curriculum*/
+
+#curriculum {
+    .section-title {
+        margin: 3rem auto 0 5rem;
+        width: 100%;
+        display: flex;
+
+        flex-direction: column;
+
+        h1 {
+            color: var(--orange);
+        }
+    }
+
+    .aboutme {
+        border-bottom: var(--blue) 1px solid;
+        border-radius: 20px;
+        margin: 0 2rem;
+
+        p {
+            padding: 2rem 3rem;
+            font-weight: 400;
+            font-size: 12px;
+            letter-spacing: 1.2px;
+        }
+    }
+}
+
+/* End Curriculum*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ObserverJS */
+
+.fadein {
+    opacity: 0;
+}
+
+.animright {
+    opacity: 0;
+}
+
+.animleft {
+    opacity: 0;
+}
+
+
+@keyframes animleft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+
+        opacity: 0;
+    }
+
+    to {
+
+        opacity: 1;
+    }
+}
+
+@keyframes animright {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
