@@ -39,7 +39,7 @@ html .button {
 }
 @media only screen and (max-width: 800px) {
   html .button {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 html .button:hover {
@@ -47,10 +47,11 @@ html .button:hover {
   color: white;
 }
 html .inactive {
-  color: rgba(199, 199, 199, 0.5137254902);
+  color: grey;
   font-size: 12px;
   margin: auto 1rem;
   padding-top: 0.2rem;
+  font-style: italic;
 }
 
 /* End Generali/
@@ -65,11 +66,16 @@ nav {
 }
 @media only screen and (max-width: 800px) {
   nav {
-    display: none;
+    justify-content: center;
   }
 }
 nav h3 {
   margin-left: 1rem;
+}
+@media only screen and (max-width: 800px) {
+  nav h3 {
+    display: none;
+  }
 }
 nav h3 a {
   color: white;
@@ -94,7 +100,7 @@ nav ul li a:hover {
 /* Landing Page*/
 #landing {
   background-image: url("../img/banner.jpg");
-  background-position: left;
+  background-position: center;
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -130,17 +136,24 @@ nav ul li a:hover {
   color: white;
   text-align: center;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 20px;
+  letter-spacing: 1.5px;
 }
 @media only screen and (max-width: 800px) {
   #landing p {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 #landing .buttons {
   display: flex;
   margin: 1rem;
+}
+@media only screen and (max-width: 800px) {
+  #landing .buttons {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 #landing .social-landing {
   display: flex;
@@ -190,13 +203,13 @@ nav ul li a:hover {
 }
 #curriculum .aboutme p {
   color: white;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 12px;
   letter-spacing: 1.2px;
 }
 @media only screen and (max-width: 800px) {
   #curriculum .aboutme p {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 #curriculum .timeline {
@@ -220,27 +233,27 @@ nav ul li a:hover {
 }
 @media only screen and (max-width: 800px) {
   #curriculum .timeline h3 {
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 1rem;
   }
 }
 #curriculum .timeline small {
-  color: rgba(199, 199, 199, 0.5137254902);
+  color: gray;
 }
 @media only screen and (max-width: 800px) {
   #curriculum .timeline small {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 #curriculum .timeline p {
   color: white;
-  font-weight: 300;
-  font-size: 12px;
+  font-weight: 400;
+  font-size: 14px;
   letter-spacing: 1.2px;
 }
 @media only screen and (max-width: 800px) {
   #curriculum .timeline p {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
