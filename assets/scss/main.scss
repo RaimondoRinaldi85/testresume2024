@@ -346,6 +346,77 @@ nav {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ObserverJS */
 
 .fadein {
@@ -357,6 +428,10 @@ nav {
 }
 
 .animleft {
+    opacity: 0;
+}
+
+.animup {
     opacity: 0;
 }
 
@@ -393,6 +468,18 @@ nav {
 
     to {
         transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes animup {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
         opacity: 1;
     }
 }

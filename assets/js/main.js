@@ -60,3 +60,24 @@ imagesright.forEach(image => {
 
     observer.observe(image)
 })
+
+// animazione da sotto
+const imagesup = document.querySelectorAll('.animup');
+
+observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.intersectionRatio > 0) {
+            entry.target.style.animation = `animup .5s ${entry.target.dataset.delay} forwards ease-out`;
+        }
+        else {
+            entry.target.style.animation = 'none';
+        }
+    })
+})
+
+imagesup.forEach(image => {
+
+    observer.observe(image)
+})

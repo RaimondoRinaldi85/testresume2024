@@ -271,6 +271,10 @@ nav ul li a:hover {
   opacity: 0;
 }
 
+.animup {
+  opacity: 0;
+}
+
 @keyframes animleft {
   from {
     transform: translateX(-100px);
@@ -296,6 +300,16 @@ nav ul li a:hover {
   }
   to {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes animup {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
