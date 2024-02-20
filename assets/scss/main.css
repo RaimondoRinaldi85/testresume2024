@@ -32,7 +32,7 @@ html .button {
   border-radius: 2px;
   background-color: white;
   margin: 0.5rem;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   color: #003F7D;
   transition: 0.5s;
@@ -165,7 +165,7 @@ nav ul li a:hover {
   margin: 2.5rem 1.5rem 0 0;
 }
 #landing .social-landing li a {
-  font-size: 25px;
+  font-size: 30px;
   color: white;
 }
 #landing .social-landing li a:hover {
@@ -176,7 +176,7 @@ nav ul li a:hover {
 /* Curriculum*/
 #curriculum {
   background-color: var(--navy);
-  padding-top: 3rem;
+  padding: 3rem 0;
 }
 #curriculum .section-title {
   width: 100%;
@@ -212,52 +212,133 @@ nav ul li a:hover {
     font-size: 12px;
   }
 }
-#curriculum .timeline {
-  border-radius: 10px;
-  margin: 0 2rem 2rem 2rem;
-  box-shadow: var(--shadow);
-  padding: 3rem;
+
+/* End Curriculum*/
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 100px auto;
+}
+.timeline .container {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+}
+.timeline .container img {
+  position: absolute;
+  width: 40px;
+  border-radius: 50%;
+  right: -20px;
+  top: 32px;
+  z-index: 10;
 }
 @media only screen and (max-width: 800px) {
-  #curriculum .timeline {
-    margin: 0 0.5rem 1rem 0.5rem;
-    box-shadow: none;
-    padding: 1rem;
+  .timeline .container img {
+    left: 10px;
   }
 }
-#curriculum .timeline hr {
-  width: 300px;
-}
-#curriculum .timeline h3 {
-  color: white;
-}
 @media only screen and (max-width: 800px) {
-  #curriculum .timeline h3 {
-    font-size: 14px;
-    margin-bottom: 1rem;
+  .timeline .container {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
   }
 }
-#curriculum .timeline small {
-  color: gray;
+.timeline .text-box {
+  padding: 20px 30px;
+  background: white;
+  position: relative;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.timeline .text-box h2 {
+  font-weight: 700;
+}
+.timeline .text-box small {
+  display: inline-block;
+  margin-bottom: 15px;
 }
 @media only screen and (max-width: 800px) {
-  #curriculum .timeline small {
-    font-size: 12px;
+  .timeline .text-box small {
+    margin-bottom: 10px;
   }
 }
-#curriculum .timeline p {
-  color: white;
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 1.2px;
+@media only screen and (max-width: 800px) {
+  .timeline .text-box {
+    font-size: 13px;
+  }
+}
+.timeline .left-container {
+  left: 0;
+}
+.timeline .left-container .arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid white;
+  right: -15px;
 }
 @media only screen and (max-width: 800px) {
-  #curriculum .timeline p {
-    font-size: 12px;
+  .timeline .left-container .arrow {
+    border-right: 15px solid white;
+    border-left: 0;
+    left: -15px;
+  }
+}
+.timeline .right-container {
+  left: 50%;
+}
+.timeline .right-container img {
+  left: -20px;
+}
+@media only screen and (max-width: 800px) {
+  .timeline .right-container img {
+    left: 10px;
+  }
+}
+.timeline .right-container .arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid white;
+  left: -15px;
+}
+@media only screen and (max-width: 800px) {
+  .timeline .right-container {
+    left: 0;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .timeline {
+    margin: 50px auto;
   }
 }
 
-/* End Curriculum*/
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: white;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+}
+@media only screen and (max-width: 800px) {
+  .timeline::after {
+    left: 31px;
+  }
+}
+
 /* ObserverJS */
 .fadein {
   opacity: 0;

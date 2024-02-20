@@ -58,7 +58,7 @@ html {
         border-radius: 2px;
         background-color: white;
         margin: .5rem;
-        font-size: 12px;
+        font-size: 16px;
         font-weight: 600;
         color: #003F7D;
         transition: .5s;
@@ -200,7 +200,7 @@ nav {
             margin: 2.5rem 1.5rem 0 0;
 
             a {
-                font-size: 25px;
+                font-size: 30px;
                 color: white;
 
                 &:hover {
@@ -216,7 +216,7 @@ nav {
 
 #curriculum {
     background-color: var(--navy);
-    padding-top: 3rem;
+    padding: 3rem 0;
 
     .section-title {
         width: 100%;
@@ -256,57 +256,187 @@ nav {
 
         }
     }
-
-    .timeline {
-        border-radius: 10px;
-        margin: 0 2rem 2rem 2rem;
-        box-shadow: var(--shadow);
-        padding: 3rem;
-
-        @include small {
-            margin: 0 .5rem 1rem .5rem;
-            box-shadow: none;
-            padding: 1rem;
-
-        }
-
-        hr {
-            width: 300px;
-        }
-
-        h3 {
-            color: white;
-
-            @include small {
-                font-size: 14px;
-                margin-bottom: 1rem;
-            }
-        }
-
-        small {
-            color: gray;
-
-            @include small {
-                font-size: 12px;
-            }
-        }
-
-        p {
-            color: white;
-            font-weight: 400;
-            font-size: 14px;
-            letter-spacing: 1.2px;
-
-            @include small {
-                font-size: 12px;
-
-            }
-
-        }
-    }
 }
 
 /* End Curriculum*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+
+    .container {
+        padding: 10px 50px;
+        position: relative;
+        width: 50%;
+
+        img {
+            position: absolute;
+            width: 40px;
+            border-radius: 50%;
+            right: -20px;
+            top: 32px;
+            z-index: 10;
+
+            @include small {
+                left: 10px;
+            }
+        }
+
+        @include small {
+            width: 100%;
+            padding-left: 80px;
+            padding-right: 25px;
+        }
+    }
+
+    .text-box {
+        padding: 20px 30px;
+        background: white;
+        position: relative;
+        border-radius: 5px;
+        font-size: 15px;
+
+        h2 {
+            font-weight: 700;
+        }
+
+        small {
+            display: inline-block;
+            margin-bottom: 15px;
+
+            @include small {
+                margin-bottom: 10px;
+            }
+        }
+
+        @include small {
+            font-size: 13px;
+        }
+    }
+
+    .left-container {
+        left: 0;
+
+        .arrow {
+            height: 0;
+            width: 0;
+            position: absolute;
+            top: 28px;
+            z-index: 1;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 15px solid white;
+            right: -15px;
+
+            @include small {
+                border-right: 15px solid white;
+                border-left: 0;
+                left: -15px;
+            }
+        }
+    }
+
+    .right-container {
+        left: 50%;
+
+        img {
+            left: -20px;
+
+            @include small {
+                left: 10px;
+            }
+        }
+
+        .arrow {
+            height: 0;
+            width: 0;
+            position: absolute;
+            top: 28px;
+            z-index: 1;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-right: 15px solid white;
+            left: -15px;
+        }
+
+        @include small {
+            left: 0;
+        }
+    }
+
+    @include small {
+        margin: 50px auto;
+    }
+
+}
+
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: white;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+
+    @include small {
+        left: 31px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
