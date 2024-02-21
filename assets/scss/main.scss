@@ -13,7 +13,8 @@
     --orange: #e67e22;
     --navy: #2c3e50;
     --black: #34495e;
-    --shadow: 2px 2px 12px rgba(0, 0, 0, 0.267);
+    --black-tran: #00000027;
+    --shadow: 2px 2px 12px rgba(0, 0, 0, 0.171);
 }
 
 @mixin small {
@@ -78,9 +79,28 @@ html {
     }
 }
 
+.section-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    h1 {
+        font-size: 30px;
+        color: var(--orange);
+    }
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
 /* End Generali/
 /* Navbar*/
-
 nav {
     background-color: var(--black);
     display: flex;
@@ -130,7 +150,6 @@ nav {
 
 /* End Navbar*/
 /* Landing Page*/
-
 #landing {
     background-image: url("../img/banner.jpg");
     background-position: center;
@@ -212,26 +231,14 @@ nav {
 }
 
 /* End Landing Page*/
-/* Curriculum*/
-
+/* About-me*/
 #curriculum {
-    background-color: var(--navy);
     padding: 3rem 0;
 
-    .section-title {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 2rem;
-
-        h1 {
-            color: var(--orange);
-        }
-    }
 
     .aboutme {
-        background-color: var(--navy);
-        border-radius: 10px;
+        background-color: var(--black-tran);
+        border-radius: 5px;
         margin: 0 2rem 2rem 2rem;
         box-shadow: var(--shadow);
         padding: 3rem;
@@ -258,28 +265,13 @@ nav {
     }
 }
 
-/* End Curriculum*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* End About-me*/
+/* Timeline*/
 .timeline {
     position: relative;
     max-width: 1200px;
     margin: 100px auto;
+
 
     .container {
         padding: 10px 50px;
@@ -387,7 +379,6 @@ nav {
 
 }
 
-
 .timeline::after {
     content: '';
     position: absolute;
@@ -404,13 +395,86 @@ nav {
     }
 }
 
+/* End Timeline*/
+/* Studi*/
+#studies {
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include small {
+        flex-direction: column;
+        padding: 0 .5rem;
+    }
+
+    .school {
+        background-color: #00000027;
+        border-radius: 5px;
+        margin: 0 1rem 2rem 1rem;
+        box-shadow: var(--shadow);
+        padding: 1rem;
+        color: white;
+        min-width: 50%;
+        min-height: 300px;
+
+        @include small {
+            min-width: 100%;
+        }
+
+        h3 {
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 16px;
+        }
 
 
+        small {
+            font-size: 12px;
+            font-style: italic;
 
+            @include small {
+                font-size: 10px;
+            }
+        }
 
+    }
 
+    .certs {
+        background-color: white;
+        border-radius: 5px;
+        margin: 0 1rem 2rem 1rem;
+        box-shadow: var(--shadow);
+        padding: 1rem;
+        min-width: 50%;
+        min-height: 300px;
 
+        @include small {
+            min-width: 100%;
+        }
 
+        h3 {
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        small {
+            font-size: 12px;
+            font-style: italic;
+
+            @include small {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+/* End Studi*/
 
 
 
