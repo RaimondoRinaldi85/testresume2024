@@ -74,6 +74,16 @@ html .inactive {
   text-align: center;
 }
 
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: white;
+  background-color: var(--black);
+  padding: 0.5rem;
+  font-size: 12px;
+}
+
 /* End Generali/
 /* Navbar*/
 nav {
